@@ -39,5 +39,6 @@ jobs:
           git add Time_Series_Forecasting_Assignments.ipynb
           if ! git diff --cached --quiet; then
             git commit -m 'Save executed assignment results [skip ci]'
-            git push
+            git pull --rebase origin main
+            git push origin main
           fi
